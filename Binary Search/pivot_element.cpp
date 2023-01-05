@@ -3,6 +3,7 @@ using namespace std;
 int BinarySearch(int arr[], int size)
 {
     int low = 0, high = size - 1, mid = low + (high - low) / 2;
+    cout << "mid: " << mid << endl;
     while (low < high)
     {
         if (arr[mid] >= arr[0])
@@ -15,12 +16,12 @@ int BinarySearch(int arr[], int size)
         }
         mid = low + (high - low) / 2;
     }
-    return high;
+    return low;
 }
 int main()
 {
-    int arr[6] = {1, 5, 13, 18, 3, 6};
-    int pivot = BinarySearch(arr, 7);
+    int arr[5] = {7, 9, 1, 2, 3};
+    int pivot = BinarySearch(arr, 5);
     cout << "Pivot Element is: " << arr[pivot] << " Index: " << pivot;
     return 0;
 }
