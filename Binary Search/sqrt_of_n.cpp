@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+
 int getSquareRoot(int val)
 {
     int s = 0, e = val - 1, mid = s + (e - s) / 2;
@@ -17,6 +18,7 @@ int getSquareRoot(int val)
         }
         mid = s + (e - s) / 2;
     }
+
     return ans;
 }
 int main()
