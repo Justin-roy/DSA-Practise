@@ -36,10 +36,26 @@ void SelectionSort(int arr[], int size)
         i++;
     }
 }
+void SelectionSort2(int arr[], int size)
+{
+    for (int i = 1; i < size; i++)
+    {
+        int temp = arr[i];
+        int j = i - 1;
+        for (; j >= 0; j--)
+        {
+            if (arr[j] > temp)
+                arr[j + 1] = arr[j];
+            else
+                break;
+        }
+        arr[j + 1] = temp;
+    }
+}
 int main()
 {
     int arr[5] = {64, 25, 12, 22, 11};
-    SelectionSort(arr, 5);
+    SelectionSort2(arr, 5);
     PrintArray(arr, 5);
     return 0;
 }
