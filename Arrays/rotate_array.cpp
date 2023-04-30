@@ -1,7 +1,8 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-void PrintArray(vector<int> &v)
+
+void PrintVector(vector<int> &v)
 {
     for (int i = 0; i < v.size(); i++)
     {
@@ -9,6 +10,7 @@ void PrintArray(vector<int> &v)
     }
     cout << endl;
 }
+
 vector<int> RotateArray(vector<int> &v, int k)
 {
     int i = 0;
@@ -19,7 +21,7 @@ vector<int> RotateArray(vector<int> &v, int k)
         int olderVal = v[pos];
         v[pos] = v[i];
         i++;
-        PrintArray(v);
+        PrintVector(v);
     }
     return v;
 }
@@ -48,7 +50,7 @@ int main()
     v.push_back(7);
     int k = 3;
     RotateArray2(v, k);
-    PrintArray(v);
+    PrintVector(v);
 
     return 0;
 }
