@@ -19,6 +19,7 @@ void InsertionSort(int arr[], int size)
             if (arr[j] > temp)
             {
                 arr[j + 1] = arr[j];
+                PrintArray(arr, 5);
             }
             else
             {
@@ -31,7 +32,7 @@ void InsertionSort(int arr[], int size)
 }
 int main()
 {
-    int arr[5] = {1, 5, 3, 0, 9};
+    int arr[5] = {2, 4, 6, 8, 3};
     InsertionSort(arr, 5);
     PrintArray(arr, 5);
     return 0;
