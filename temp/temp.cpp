@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-   cout<<3/6;
-
+   
+   cout<<abs(0-5);
    return false;
 }
